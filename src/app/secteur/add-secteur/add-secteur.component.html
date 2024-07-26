@@ -1,0 +1,21 @@
+<div class="container" *ngIf="secteurFormGroup">
+  <form [formGroup]="secteurFormGroup">
+    <div class="form-group">
+      <label>ID</label>
+      <input type="number" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" formControlName="nom">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" formControlName="desc"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" class="form-control" formControlName="image" accept=".jpg,.jpeg,.png">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="onSaveSecteur()">Save Secteur</button>
+  </form>
+</div>

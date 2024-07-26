@@ -1,0 +1,28 @@
+<form [formGroup]="chefPoleFormEdit" (ngSubmit)="onUpdateChefPol()">
+  <div class="modal-body">
+    <!-- Ajoutez les champs de formulaire ici -->
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom</label>
+      <input type="text" id="nom" formControlName="nom" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="prenom" class="form-label">Prénom</label>
+      <input type="text" id="prenom" formControlName="prenom" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="cin" class="form-label">CIN</label>
+      <input type="text" id="cin" formControlName="cin" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="civilite" class="form-label">Civilité</label>
+      <input type="text" id="civilite" formControlName="civilite" class="form-control" />
+    </div>
+    <!-- Ajoutez le reste des champs similaires -->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Save changes</button>
+  </div>
+</form>
+
+

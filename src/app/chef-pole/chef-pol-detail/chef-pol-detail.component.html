@@ -1,0 +1,97 @@
+<!-- .nk-block-head -->
+<div class="nk-block-head nk-block-head-sm">
+  <div class="nk-block-between g-3">
+    <div class="nk-block-head-content">
+      <h3 class="nk-block-title page-title">Chef de Pôle Details</h3>
+      <div class="nk-block-des text-soft">
+        <p>Details of the selected chef de pôle</p>
+      </div>
+    </div>
+    <div class="nk-block-head-content">
+      <a [routerLink]="['/listchefs-pole']" class="btn btn-outline-light bg-white d-none d-sm-inline-flex">
+        <em class="icon ni ni-arrow-left"></em>
+        <span>Back</span>
+      </a>
+      <a [routerLink]="['/listchefs-pole']" class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none">
+        <em class="icon ni ni-arrow-left"></em>
+      </a>
+    </div>
+  </div>
+</div><!-- .nk-block-head -->
+
+<!-- .nk-block -->
+<div class="nk-block">
+  <div class="row g-gs">
+    <div class="col-xl-4">
+      <div class="card card-bordered">
+        <div class="card-inner-group">
+          <div class="card-inner">
+            <div class="user-card user-card-s2">
+              <div class="user-avatar lg bg-primary">
+                <img src="./assets/images/avatar/b-sm.jpg" alt="">
+              </div>
+              <div class="user-info">
+                <div class="badge bg-light rounded-pill ucap">{{ ChefPol!.civilite }}</div>
+                <h5>{{ ChefPol!.nom }}</h5>
+                <span class="sub-text">{{ ChefPol?.prenom }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-inner card-inner-sm">
+            <ul class="btn-toolbar justify-center gx-1">
+              <li><a href="mailto:{{ChefPol?.emailPro}}" class="btn btn-trigger btn-icon"><em class="icon ni ni-mail"></em></a></li>
+              <li><a href="tel:{{ChefPol?.tel1}}" class="btn btn-phone btn-icon"><em class="icon ni ni-call"></em></a></li>
+              <li><a href="whatsapp://send?abid={{ChefPol?.tel1}}" class="btn btn-phone btn-icon"><em class="icon ni ni-whatsapp"></em></a></li>
+            </ul>
+          </div>
+          <div class="card-inner">
+            <h6 class="overline-title mb-2">Short Details</h6>
+            <div class="row g-3">
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Nom:</span>
+                <span>{{ ChefPol?.nom }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Prénom:</span>
+                <span>{{ ChefPol?.prenom }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">CIN:</span>
+                <span>{{ ChefPol?.cin }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Email Professionnel:</span>
+                <span>{{ ChefPol?.emailPro }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Téléphone:</span>
+                <span>{{ ChefPol?.tel1 }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Matricule:</span>
+                <span>{{ ChefPol?.matricule }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Pôle:</span>
+                <span>{{ ChefPol?.pole }}</span>
+              </div>
+              <div class="col-sm-6 col-xl-12">
+                <span class="sub-text">Date Début:</span>
+                <span>{{ ChefPol?.dateDebut | date }}</span>
+              </div>
+            </div>
+          </div><!-- .card-inner -->
+          <!-- .card-inner -->
+        </div>
+      </div>
+    </div><!-- .col -->
+    <div class="col-xl-8">
+      <div class="card card-bordered">
+        <div class="card-inner">
+          <!-- You can add more details or recent activity here -->
+        </div>
+      </div>
+    </div><!-- .col -->
+  </div><!-- .row -->
+</div><!-- .nk-block -->
+

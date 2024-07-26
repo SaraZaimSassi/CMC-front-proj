@@ -1,0 +1,174 @@
+
+        <form [formGroup]="formateurFormEdit" (ngSubmit)="onSubmit()">
+          <div class="tab-content">
+            <div class="tab-pane active" id="editInformation">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-nom">Nom</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-nom" formControlName="nom" placeholder="Nom" >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-prenom">Prénom</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-prenom" formControlName="prenom" placeholder="Prénom">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-cin">CIN</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-cin" formControlName="cin" placeholder="CIN">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-civilite">Civilité</label>
+                    <div class="form-control-wrap">
+                      <select class="form-select js-select2" id="edit-civilite" formControlName="civilite" data-placeholder="Select one">
+                        <option value="monsieur">Monsieur</option>
+                        <option value="madame">Madame</option>
+                        <option value="mademoiselle">Mademoiselle</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-date-naissance">Date de Naissance</label>
+                    <div class="form-control-wrap">
+                      <input type="date" class="form-control" id="edit-date-naissance" formControlName="dateNaissance">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-situation-familiale">Situation Familiale</label>
+                    <div class="form-control-wrap">
+                      <select class="form-select js-select2" id="edit-situation-familiale" formControlName="situationFamiliale" data-placeholder="Select one">
+                        <option value="celibataire">Célibataire</option>
+                        <option value="marie">Marié</option>
+                        <option value="divorce">Divorcé</option>
+                        <option value="veuf">Veuf</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-nombre-enfants">Nombre d'Enfants</label>
+                    <div class="form-control-wrap">
+                      <input type="number" class="form-control" id="edit-nombre-enfants" formControlName="nombreEnfants" placeholder="Nombre d'Enfants">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-date-affectation">Date d'Affectation</label>
+                    <div class="form-control-wrap">
+                      <input type="date" class="form-control" id="edit-date-affectation" formControlName="dateAffectation">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-date-debut">Date de Début</label>
+                    <div class="form-control-wrap">
+                      <input type="date" class="form-control" id="edit-date-debut" formControlName="dateDebut">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-id">ID</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-id" formControlName="id" placeholder="ID" >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-pole">Pôle</label>
+                    <div class="form-control-wrap">
+                      <select class="form-select js-select2" id="edit-pole" formControlName="pole" data-placeholder="Select one">
+                        <option value="tourisme">Tourisme</option>
+                        <option value="hotellerie">Hôtellerie</option>
+                        <option value="restauration">Restauration</option>
+                        <option value="services-a-la-personne">Services à la Personne</option>
+                        <option value="agro-industrie">Agro-Industrie</option>
+                        <option value="arts-industrie-graphique">Arts et Industrie Graphique</option>
+                        <option value="gestion-commerce">Gestion et Commerce</option>
+                        <option value="industrie-agriculture">Industrie et Agriculture</option>
+                        <option value="digital-ai">Digital et AI</option>
+                        <option value="artisanat">Artisanat</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-email-pro">Email Professionnel</label>
+                    <div class="form-control-wrap">
+                      <input type="email" class="form-control" id="edit-email-pro" formControlName="emailPro" placeholder="Email Professionnel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-email-perso">Email Personnel</label>
+                    <div class="form-control-wrap">
+                      <input type="email" class="form-control" id="edit-email-perso" formControlName="emailPerso" placeholder="Email Personnel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-tel1">Téléphone 1</label>
+                    <div class="form-control-wrap">
+                      <input type="tel" class="form-control" id="edit-tel1" formControlName="tel1" placeholder="Téléphone 1">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-tel2">Téléphone 2</label>
+                    <div class="form-control-wrap">
+                      <input type="tel" class="form-control" id="edit-tel2" formControlName="tel2" placeholder="Téléphone 2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-adresse">Adresse</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-adresse" formControlName="adresse" placeholder="Adresse">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="edit-ville">Ville</label>
+                    <div class="form-control-wrap">
+                      <input type="text" class="form-control" id="edit-ville" formControlName="ville" placeholder="Ville">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="editAddress">
+              <div class="row gy-4">
+                <!-- Ajoutez des champs si nécessaire pour les détails de contact supplémentaires -->
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">Update Formateur</button>
+            </div>
+          </div>
+        </form>
+

@@ -1,0 +1,112 @@
+
+<div class="container" *ngIf="chefPolFormGroup">
+  <form [formGroup]="chefPolFormGroup">
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" formControlName="nom"
+             [ngClass]="{'is-invalid': submitted && chefPolFormGroup.controls['nom'].errors}">
+      <div *ngIf="submitted && chefPolFormGroup.controls['nom'].errors" class="invalid-feedback">
+        <div *ngIf="chefPolFormGroup.controls['nom'].errors!['required']">Nom is Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Prénom</label>
+      <input type="text" class="form-control" formControlName="prenom"
+             [ngClass]="{'is-invalid': submitted && chefPolFormGroup.controls['prenom'].errors}">
+      <div *ngIf="submitted && chefPolFormGroup.controls['prenom'].errors" class="invalid-feedback">
+        <div *ngIf="chefPolFormGroup.controls['prenom'].errors!['required']">Prénom is Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>CIN</label>
+      <input type="text" class="form-control" formControlName="cin"
+             [ngClass]="{'is-invalid': submitted && chefPolFormGroup.controls['cin'].errors}">
+      <div *ngIf="submitted && chefPolFormGroup.controls['cin'].errors" class="invalid-feedback">
+        <div *ngIf="chefPolFormGroup.controls['cin'].errors!['required']">CIN is Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Civilité</label>
+      <select class="form-select" formControlName="civilite">
+        <option value="">Select one</option>
+        <option value="monsieur">Monsieur</option>
+        <option value="madame">Madame</option>
+        <option value="mademoiselle">Mademoiselle</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date de Naissance</label>
+      <input type="date" class="form-control" formControlName="dateNaissance">
+    </div>
+    <div class="form-group">
+      <label>Situation Familiale</label>
+      <select class="form-select" formControlName="situationFamiliale">
+        <option value="">Select one</option>
+        <option value="celibataire">Célibataire</option>
+        <option value="marie">Marié</option>
+        <option value="divorce">Divorcé</option>
+        <option value="veuf">Veuf</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Nombre d'Enfants</label>
+      <input type="number" class="form-control" formControlName="nombreEnfants">
+    </div>
+    <div class="form-group">
+      <label>Date d'Affectation</label>
+      <input type="date" class="form-control" formControlName="dateAffectation">
+    </div>
+    <div class="form-group">
+      <label>Photo</label>
+      <input type="file" class="form-control" formControlName="photo" accept=".jpg,.jpeg,.png">
+    </div>
+    <div class="form-group">
+      <label>Date de Début</label>
+      <input type="date" class="form-control" formControlName="dateDebut">
+    </div>
+    <div class="form-group">
+      <label>Matricule</label>
+      <input type="text" class="form-control" formControlName="matricule">
+    </div>
+    <div class="form-group">
+      <label>Pôle</label>
+      <select class="form-select" formControlName="pole">
+        <option value="">Select one</option>
+        <option value="tourisme">Tourisme</option>
+        <option value="hotellerie">Hôtellerie et Restauration</option>
+        <option value="services-a-la-personne">Services à la Personne et à la Communauté</option>
+        <option value="agro-industrie">Agro-Industrie</option>
+        <option value="arts-industrie-graphique">Arts et Industrie Graphique</option>
+        <option value="gestion-commerce">Gestion et Commerce</option>
+        <option value="industrie-agriculture">Industrie et Agriculture</option>
+        <option value="digital-ai">Digital et AI</option>
+        <option value="artisanat">Artisanat</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Email Professionnel</label>
+      <input type="email" class="form-control" formControlName="emailPro">
+    </div>
+    <div class="form-group">
+      <label>Email Personnel</label>
+      <input type="email" class="form-control" formControlName="emailPerso">
+    </div>
+    <div class="form-group">
+      <label>Téléphone 1</label>
+      <input type="text" class="form-control" formControlName="tel1">
+    </div>
+    <div class="form-group">
+      <label>Téléphone 2</label>
+      <input type="text" class="form-control" formControlName="tel2">
+    </div>
+    <div class="form-group">
+      <label>Adresse</label>
+      <input type="text" class="form-control" formControlName="adresse">
+    </div>
+    <div class="form-group">
+      <label>Ville</label>
+      <input type="text" class="form-control" formControlName="ville">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="onSaveChefPole()">Save Chef de Pôle</button>
+  </form>
+</div>

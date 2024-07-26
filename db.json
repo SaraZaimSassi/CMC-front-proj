@@ -1,0 +1,103 @@
+{
+  "formateurs": [
+    {
+      "id": "2",
+      "nom": "Smith",
+      "prenom": "Jane",
+      "cin": "0987654321",
+      "civilite": "madame",
+      "dateNaissance": "1985-05-15",
+      "situationFamiliale": "marie",
+      "nombreEnfants": 2,
+      "dateAffectation": "2022-12-01",
+      "dateDebut": "2023-01-15",
+      "pole": "restauration",
+      "emailPro": "jane.smith@example.com",
+      "emailPerso": "jane@gmail.com",
+      "telephonePro": "9876543210",
+      "telephonePerso": "6543210987",
+      "adresse": "456 Main Street",
+      "ville": "New York",
+      "codePostal": "10001",
+      "pays": "USA"
+    }
+  ],
+  "chefs-pole": [
+    {
+      "id": "71f3",
+      "nom": "ZAIM SASSI",
+      "prenom": "SARA",
+      "cin": "ertyui",
+      "civilite": "",
+      "dateNaissance": "",
+      "situationFamiliale": "",
+      "nombreEnfants": "",
+      "dateAffectation": "",
+      "photo": null,
+      "dateDebut": "",
+      "matricule": "",
+      "pole": "",
+      "emailPro": "sarahzaimsassi@gmail.com",
+      "emailPerso": "sarahzaimsassi@gmail.com",
+      "tel1": "0687316935",
+      "tel2": "",
+      "adresse": "NOUACEUR NB 13",
+      "ville": "CASABLANCA"
+    }
+  ],
+  "secteurs": [
+    {
+      "id": "1",
+      "nom": "Tourisme",
+      "desc": "Secteur lié au tourisme et aux voyages.",
+      "image": "tourisme.jpg"
+    },
+    {
+      "id": "5",
+      "nom": "hhk",
+      "desc": "ghhk",
+      "image": "C:\\fakepath\\gmail.jpeg"
+    },
+    {
+      "id": "5",
+      "nom": "jffk",
+      "desc": "sdfghjkcvbn",
+      "image": "C:\\fakepath\\hpa.png"
+    }
+  ],
+  "poles": [
+    {
+      "id": "1",
+      "nom": "Pôle Tourisme",
+      "desc": "Pôle dédié aux activités liées au tourisme.",
+      "image": "pole-tourisme.jpg",
+      "secteur": {
+        "id": 1,
+        "nom": "Tourisme",
+        "desc": "Secteur lié au tourisme et aux voyages.",
+        "image": "tourisme.jpg"
+      }
+    },
+    {
+      "id": "6",
+      "nom": "hhk",
+      "desc": "kkjj",
+      "image": "C:\\fakepath\\gmail.jpeg",
+      "secteur": "[object Object]"
+    },
+    {
+      "id": "2",
+      "nom": "hhk",
+      "desc": "sdfghjukilo",
+      "image": "C:\\fakepath\\git.jpeg",
+      "secteur": "[object Object]"
+    },
+    {
+      "id": 2,
+      "nom": "hhk",
+      "desc": "fghjkl",
+      "image": "C:\\fakepath\\crimages.png",
+      "secteur": "[object Object]"
+    }
+  ]
+}

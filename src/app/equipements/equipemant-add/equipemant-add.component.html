@@ -1,0 +1,59 @@
+
+<div class="container" *ngIf="equipementFormGroup">
+  <form [formGroup]="equipementFormGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" formControlName="nom"
+             [ngClass]="{'is-invalid': submitted && equipementFormGroup.controls['nom'].errors}">
+      <div *ngIf="submitted && equipementFormGroup.controls['nom'].errors" class="invalid-feedback">
+        <div *ngIf="equipementFormGroup.controls['nom'].errors!['required']">Nom is Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Code Produit</label>
+      <input type="text" class="form-control" formControlName="codeProduit"
+             [ngClass]="{'is-invalid': submitted && equipementFormGroup.controls['codeProduit'].errors}">
+      <div *ngIf="submitted && equipementFormGroup.controls['codeProduit'].errors" class="invalid-feedback">
+        <div *ngIf="equipementFormGroup.controls['codeProduit'].errors!['required']">Code Produit is Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Miniature</label>
+      <input type="file" class="form-control" (change)="onFileChange($event)" accept=".jpg,.jpeg,.png">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select class="form-select" formControlName="status">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Categories</label>
+      <select class="form-select" formControlName="categories" multiple>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Model</label>
+      <input type="text" class="form-control" formControlName="model">
+    </div>
+    <div class="form-group">
+      <label>Marque</label>
+      <input type="text" class="form-control" formControlName="marque">
+    </div>
+    <div class="form-group">
+      <label>Famille</label>
+      <input type="text" class="form-control" formControlName="famille">
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <input type="text" class="form-control" formControlName="type">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" formControlName="desc" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter un équipement</button>
+  </form>
+</div>

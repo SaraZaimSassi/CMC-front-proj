@@ -33,6 +33,10 @@ import { EditStagiereComponent } from './stagiaire/edit-stagiere/edit-stagiere.c
 import { ListStagiereComponent } from './stagiaire/list-stagiere/list-stagiere.component';
 import { DetailStagiereComponent } from './stagiaire/detail-stagiere/detail-stagiere.component';
 import { PoleComponent } from './pol/pole/pole.component';
+import { EquipementsComponent } from './equipements/equipements.component';
+import { EquipemantAddComponent } from './equipements/equipemant-add/equipemant-add.component';
+import { EquipemantEditComponent } from './equipements/equipemant-edit/equipemant-edit.component';
+import { EquipemantListComponent } from './equipements/equipemant-list/equipemant-list.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,11 @@ import { PoleComponent } from './pol/pole/pole.component';
     EditStagiereComponent,
     ListStagiereComponent,
     DetailStagiereComponent,
-    PoleComponent
+    PoleComponent,
+    EquipementsComponent,
+    EquipemantAddComponent,
+    EquipemantEditComponent,
+    EquipemantListComponent
   ],
   imports: [
     BrowserModule,

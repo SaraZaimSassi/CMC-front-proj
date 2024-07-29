@@ -15,6 +15,9 @@ import {AddPolComponent} from "./pol/add-pol/add-pol.component";
 import {EditPolComponent} from "./pol/edit-pol/edit-pol.component";
 import {PolComponent} from "./pol/pol.component";
 import {PoleComponent} from "./pol/pole/pole.component";
+import {EquipemantListComponent} from "./equipements/equipemant-list/equipemant-list.component";
+import {EquipemantAddComponent} from "./equipements/equipemant-add/equipemant-add.component";
+import {EquipemantEditComponent} from "./equipements/equipemant-edit/equipemant-edit.component";
 
 const routes: Routes = [
   { path: "newformateur", component:FormateurAddComponent},
@@ -32,6 +35,9 @@ const routes: Routes = [
   { path: 'newpol', component: AddPolComponent },
   { path: 'pol/:id/edit', component: EditPolComponent },
   { path: 'pol/:id/show', component: PoleComponent},
+  { path: 'listequipement', component: EquipemantListComponent },
+  { path: 'newequipement', component: EquipemantAddComponent },
+  {path: 'equipement/:id/edit', component: EquipemantEditComponent },
 
 
 

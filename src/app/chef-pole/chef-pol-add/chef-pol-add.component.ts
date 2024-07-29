@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+
+import {EquipementService} from "../../services/equipement.service";
 import {ChefPol} from "../../models/chef-pol.model";
 import {ChefPolService} from "../../services/chef-pol.service";
 

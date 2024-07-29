@@ -1,7 +1,7 @@
 {
   "formateurs": [
     {
-      "id": "2",
+      "id": 2,
       "nom": "Smith",
       "prenom": "Jane",
       "cin": "0987654321",
@@ -47,27 +47,27 @@
   ],
   "secteurs": [
     {
-      "id": "1",
+      "id": 1,
       "nom": "Tourisme",
       "desc": "Secteur lié au tourisme et aux voyages.",
       "image": "tourisme.jpg"
     },
     {
-      "id": "5",
+      "id": 5,
       "nom": "hhk",
       "desc": "ghhk",
-      "image": "C:\\fakepath\\gmail.jpeg"
+      "image": "gmail.jpeg"
     },
     {
-      "id": "5",
+      "id": 6,
       "nom": "jffk",
       "desc": "sdfghjkcvbn",
-      "image": "C:\\fakepath\\hpa.png"
+      "image": "hpa.png"
     }
   ],
   "poles": [
     {
-      "id": "1",
+      "id": 1,
       "nom": "Pôle Tourisme",
       "desc": "Pôle dédié aux activités liées au tourisme.",
       "image": "pole-tourisme.jpg",
@@ -79,25 +79,68 @@
       }
     },
     {
-      "id": "6",
+      "id": 6,
       "nom": "hhk",
       "desc": "kkjj",
-      "image": "C:\\fakepath\\gmail.jpeg",
-      "secteur": "[object Object]"
-    },
-    {
-      "id": "2",
-      "nom": "hhk",
-      "desc": "sdfghjukilo",
-      "image": "C:\\fakepath\\git.jpeg",
-      "secteur": "[object Object]"
+      "image": "gmail.jpeg",
+      "secteur": {
+        "id": 6,
+        "nom": "jffk",
+        "desc": "sdfghjkcvbn",
+        "image": "hpa.png"
+      }
     },
     {
       "id": 2,
       "nom": "hhk",
+      "desc": "sdfghjukilo",
+      "image": "git.jpeg",
+      "secteur": {
+        "id": 2,
+        "nom": "Tourisme",
+        "desc": "Secteur lié au tourisme et aux voyages.",
+        "image": "tourisme.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "nom": "hhk",
       "desc": "fghjkl",
-      "image": "C:\\fakepath\\crimages.png",
-      "secteur": "[object Object]"
+      "image": "crimages.png",
+      "secteur": {
+        "id": 3,
+        "nom": "Secteur inconnu",
+        "desc": "Description inconnue",
+        "image": "default.png"
+      }
+    }
+  ],
+  "equipements": [
+    {
+      "id": 1,
+      "nom": "Equipement 1",
+      "codeProduit": "EQ123",
+      "miniature": "equipement1.jpg",
+      "status": "active",
+      "categories": ["Category1"],
+      "model": "Model1",
+      "marque": "Marque1",
+      "famille": "Famille1",
+      "type": "Type1",
+      "desc": "Description de l'équipement 1"
+    },
+    {
+      "id": 2,
+      "nom": "Equipement 2",
+      "codeProduit": "EQ124",
+      "miniature": "equipement2.jpg",
+      "status": "inactive",
+      "categories": ["Category2"],
+      "model": "Model2",
+      "marque": "Marque2",
+      "famille": "Famille2",
+      "type": "Type2",
+      "desc": "Description de l'équipement 2"
     }
   ]
 }

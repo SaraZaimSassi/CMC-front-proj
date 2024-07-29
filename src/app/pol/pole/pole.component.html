@@ -205,25 +205,8 @@
                     </div>
                   </div>
                 </div><!-- .nk-tb-item -->
-                <div class="nk-tb-item">
-                  <div class="nk-tb-col nk-tb-channel">
-                    <span class="tb-lead">Others</span>
-                  </div>
-                  <div class="nk-tb-col nk-tb-sessions">
-                    <span class="tb-sub tb-amount"><span>138</span></span>
-                  </div>
-                  <div class="nk-tb-col nk-tb-prev-sessions">
-                    <span class="tb-sub tb-amount"><span>97</span></span>
-                  </div>
-                  <div class="nk-tb-col nk-tb-change">
-                    <span class="tb-sub"><span>12.6%</span> <span class="change up"><em class="icon ni ni-arrow-long-up"></em></span></span>
-                  </div>
-                  <div class="nk-tb-col nk-tb-trend text-end">
-                    <div class="traffic-channel-ck ms-auto">
-                      <canvas class="analytics-line-small" id="OthersData"></canvas>
-                    </div>
-                  </div>
-                </div><!-- .nk-tb-item -->
+
+                <!-- .nk-tb-item -->
               </div><!-- .nk-tb-list -->
             </div><!-- .card -->
           </div><!-- .col -->
@@ -464,12 +447,14 @@
                                       <label class="custom-control-label" for="uid"></label>
                                     </div>
                                   </div>
-                                  <div class="nk-tb-col"><span class="sub-text">User</span></div>
-                                  <div class="nk-tb-col tb-col-mb"><span class="sub-text">Balance</span></div>
+                                  <div class="nk-tb-col"><span class="sub-text">Formateur</span></div>
+                                  <div class="nk-tb-col tb-col-sm"><span class="sub-text">Email</span></div>
                                   <div class="nk-tb-col tb-col-md"><span class="sub-text">Phone</span></div>
-                                  <div class="nk-tb-col tb-col-lg"><span class="sub-text">Verified</span></div>
-                                  <div class="nk-tb-col tb-col-lg"><span class="sub-text">Last Login</span></div>
-                                  <div class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></div>
+                                  <div class="nk-tb-col tb-col-lg"><span class="sub-text">Adresse</span></div>
+                                  <div class="nk-tb-col tb-col-md"><span class="sub-text">Matricule</span></div>
+                                  <div class="nk-tb-col tb-col-xxl"><span class="sub-text">Datededebut</span></div>
+                                  <div class="nk-tb-col tb-col-lg"><span class="sub-text">Status</span></div>
+                                  <div class="nk-tb-col text-end"><span class="sub-text">Actions</span></div>
                                   <div class="nk-tb-col nk-tb-col-tools text-end">
                                     <div class="dropdown">
                                       <a href="#" class="btn btn-xs btn-outline-light btn-icon dropdown-toggle" data-bs-toggle="dropdown" data-offset="0,5"><em class="icon ni ni-plus"></em></a>
@@ -506,47 +491,51 @@
                                 </div><!-- .nk-tb-item -->
 
                                 <!-- .nk-tb-item -->
-                                <div class="nk-tb-item">
+                                <div *ngFor="let formateur of formateurs" class="nk-tb-item">
                                   <div class="nk-tb-col nk-tb-col-check">
                                     <div class="custom-control custom-control-sm custom-checkbox notext">
-                                      <input type="checkbox" class="custom-control-input" id="uid10">
-                                      <label class="custom-control-label" for="uid10"></label>
+                                      <input type="checkbox" class="custom-control-input" id="cid1">
+                                      <label class="custom-control-label" for="cid1"></label>
                                     </div>
                                   </div>
                                   <div class="nk-tb-col">
-                                    <div class="user-card">
-                                      <div class="user-avatar bg-purple">
-                                        <span>EW</span>
+                                    <a href="html/customer-details.html">
+                                      <div class="user-card">
+                                        <div class="user-avatar xs bg-primary">
+                                          <span>BG</span>
+                                        </div>
+                                        <div class="user-name">
+                                          <span class="tb-lead">{{ formateur.nom+' '+formateur.prenom }} <span class="dot dot-success d-lg-none ms-1"></span></span>
+                                        </div>
                                       </div>
-                                      <div class="user-info">
-                                        <span class="tb-lead">Emma Walker <span class="dot dot-success d-md-none ms-1"></span></span>
-                                        <span>walkerexample.com</span>
-                                      </div>
+                                    </a>
+                                  </div>
+                                  <div class="nk-tb-col tb-col-sm">
+                                    <span class="sub-text">{{ formateur.emailPro }}</span>
+                                  </div>
+                                  <div class="nk-tb-col tb-col-md">
+                                    <span class="sub-text">{{ formateur.tel1 }}</span>
+                                  </div>
+                                  <div class="nk-tb-col tb-col-lg">
+                                    <span class="sub-text">{{ formateur.adresse }}</span>
+                                  </div>
+                                  <div class="nk-tb-col tb-col-md">
+                                    <div class="icon-text">
+                                      <em class="text-blue icon ni ni-visa"></em>
+                                      <span class="sub-text">{{ formateur.matricule }}</span>
                                     </div>
                                   </div>
-                                  <div class="nk-tb-col tb-col-mb">
-                                    <span class="tb-amount">55.00 <span class="currency">USD</span></span>
-                                  </div>
-                                  <div class="nk-tb-col tb-col-md">
-                                    <span>+463 471-7173</span>
+                                  <div class="nk-tb-col tb-col-xxl">
+                                    <span class="sub-text">{{ formateur.dateDebut }}</span>
                                   </div>
                                   <div class="nk-tb-col tb-col-lg">
-                                    <ul class="list-status">
-                                      <li><em class="icon text-success ni ni-check-circle"></em> <span>Email</span></li>
-                                      <li><em class="icon text-success ni ni-check-circle"></em> <span>KYC</span></li>
-                                    </ul>
-                                  </div>
-                                  <div class="nk-tb-col tb-col-lg">
-                                    <span>25 Dec 2019</span>
-                                  </div>
-                                  <div class="nk-tb-col tb-col-md">
                                     <span class="tb-status text-success">Active</span>
                                   </div>
                                   <div class="nk-tb-col nk-tb-col-tools">
                                     <ul class="nk-tb-actions gx-1">
                                       <li class="nk-tb-action-hidden">
-                                        <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Wallet">
-                                          <em class="icon ni ni-wallet-fill"></em>
+                                        <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Details">
+                                          <em class="icon ni ni-eye-fill"></em>
                                         </a>
                                       </li>
                                       <li class="nk-tb-action-hidden">
@@ -556,7 +545,7 @@
                                       </li>
                                       <li class="nk-tb-action-hidden">
                                         <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Suspend">
-                                          <em class="icon ni ni-user-cross-fill"></em>
+                                          <em class="icon ni ni-cross-fill-c"></em>
                                         </a>
                                       </li>
                                       <li>
@@ -564,20 +553,13 @@
                                           <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                           <div class="dropdown-menu dropdown-menu-end">
                                             <ul class="link-list-opt no-bdr">
-                                              <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
-                                              <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                              <li><a href="#"><em class="icon ni ni-repeat"></em><span>Transaction</span></a></li>
-                                              <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>
-                                              <li class="divider"></li>
-                                              <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
-                                              <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
-                                              <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
-                                            </ul>
+                                              </ul>
                                           </div>
                                         </div>
                                       </li>
                                     </ul>
                                   </div>
+
                                 </div><!-- .nk-tb-item -->
                               </div><!-- .nk-tb-list -->
                             </div><!-- .card-inner -->
